@@ -1,0 +1,338 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>元宵节</title>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'/>
+<link rel="stylesheet" href="css/swiper.min.css">
+<link rel="stylesheet" href="css/animate.min.css">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/jquery.js"></script>
+
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/swiper.animate.min.js"></script>
+
+<!--<link rel="stylesheet" href="/dist/css/swiper.min.css">
+<link rel="stylesheet" href="/dist/css/animate.min.css">
+<script src="/dist/js/swiper.min.js"></script>
+<script src="/dist/js/swiper.animate.min.js"></script>-->
+
+<style>
+*{
+	margin:0;
+	padding:0;
+}
+html,body{
+	height:100%;
+}
+body{
+	font-family:"microsoft yahei";
+}
+.swiper-container {
+  /*  width: 320px;
+    height: 480px;*/
+	width: 100%;
+    height: 100%;
+	background:#fff;
+}  
+.swiper-slide{
+}
+.swiper-slide{
+	width:100%;
+	height:100%;
+	    position: relative;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+
+
+}
+img{
+	display:block;
+}
+.swiper-pagination-bullet {
+width: 6px;
+height: 6px;
+background: #fff;
+opacity: .4;
+}
+.swiper-pagination-bullet-active {
+opacity: 1;
+}
+@-webkit-keyframes tipmove{0%{bottom:10px;opacity:0}50%{bottom:15px;opacity:1}100%{bottom:20px;opacity:0}}
+.ani{
+	position:absolute;
+	}
+.txt{
+	position:absolute;
+}
+#array{
+	position:absolute;z-index:999;-webkit-animation: tipmove 1.5s infinite ease-in-out;
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<div class="music" id="music" style="z-index:1000">
+    <i class="icon-music open" num="1"></i>
+    <i class="music-span"></i>
+    <audio id="aud" src="upload/wenrou.mp3"  loop="loop" autoplay="autoplay"></audio>
+    <div class="music_text">开启</div>
+</div>
+<div class="swiper-container">
+    <div class="swiper-wrapper" >
+    <!-------------slide1----------------->
+        <section class="swiper-slide" style="background-color: #fbce50">
+            <img src="images/meimao.png" class="ani resize" style="width:320px;height:107px;left:0px;top:0px;z-index:5; border-radius:20px;" swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s"  >
+            <img src="images/eye.png" class="ani resize" style="width:320px;height:103px;left:0px;top:55px;z-index:7;" swiper-animate-effect="fadeInRight" swiper-animate-duration="0.5s" swiper-animate-delay="1s"  >
+            <img src="images/huzi.png" class="ani resize" style="width:250px;height:80px;left:30px;top:150px;z-index:11;" swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="1.3s"  >
+            <img src="images/shengti.png" class="ani resize" style="width:320px;height:320px;left:0px;top:180px;z-index:10;" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="1.5s"   >
+
+
+
+        </section>
+     <!---------------slide2-------------->   
+        <section class="swiper-slide" style="    background-color: #fff65a;">
+            <img src="images/friut.png" class="ani resize" style="width:150px;height:170px;left:10px;top: 300px;z-index:3;" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0s"  >
+            <img src="images/t2.png" class="ani resize" style="width:230px;height:210px;left:100px;top:0px;z-index:3;" swiper-animate-effect="bounceIn" swiper-animate-duration="0.5s" swiper-animate-delay="1s"  >
+            <img src="upload/flower.png" class="ani resize" style="width:180px;height:220px;left:0;top:0;z-index:2;" swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0s"   >
+            <img src="upload/s1.png"  class="ani resize" style="width:320px;height:200px;left:0px;top:140px;z-index:1;" swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.5s"  >
+
+        </section>
+     <!----------------slide3-------------->
+        <section class="swiper-slide" style="background-color: #3ab79c">
+        
+        <img src="images/t3.png" class="ani resize" style="width:320px;z-index:5;"   >
+        <img src="images/t4.png" class="ani resize" style="width:165px;height:133px;left:150px;top:310px;z-index:6;" swiper-animate-effect="fadeInRight" swiper-animate-duration="0.5s" swiper-animate-delay="0s"  >
+
+        
+        </section>
+        <!-------------slide4----------------->
+        <section class="swiper-slide" style="background-image: url('images/t7.png')">
+
+            <img src="images/t5.png" class="ani resize" style="width:320px;height:290px;left:0;top:180px;z-index:6;" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s"  >
+            <img src="images/t6.png" class="ani resize" style="width:320px;height:290px;left:0;top:0px;z-index:6;" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s"  >
+
+        
+        </section>
+        
+        
+        
+    </div>
+    
+   <img src="images/web-swipe-tip.png" style="width:20px;height:15px; top:460px; left:150px;" id="array" class="resize"> 
+  <div class="swiper-pagination"></div>  
+</div>
+
+
+
+<script>  
+function fixPagesHeight() {
+	$('.swiper-slide,.swiper-container').css({
+		height: $(window).height(),
+	})
+}
+$(window).on('resize', function() {
+	fixPagesHeight();
+})
+fixPagesHeight();
+scaleW=window.innerWidth/320;
+scaleH=window.innerHeight/480;
+var resizes = document.querySelectorAll('.resize');
+          for (var j=0; j<resizes.length; j++) {
+           resizes[j].style.width=parseInt(resizes[j].style.width)*scaleW+'px';
+		   resizes[j].style.height=parseInt(resizes[j].style.height)*scaleH+'px';
+		   resizes[j].style.top=parseInt(resizes[j].style.top)*scaleH+'px';
+		   resizes[j].style.left=parseInt(resizes[j].style.left)*scaleW+'px'; 
+	
+          }
+var scales = document.querySelectorAll('.txt');
+for (var i=0; i<scales.length; i++) {
+	ss=scales[i].style;
+	ss.webkitTransform = ss.MsTransform = ss.msTransform = ss.MozTransform = ss.OTransform =ss.transform='translateX('+scales[i].offsetWidth*(scaleW-1)/2+'px) translateY('+scales[i].offsetHeight*(scaleH-1)/2+'px)scaleX('+scaleW+') scaleY('+scaleH+') ';
+}
+
+		  
+  var mySwiper = new Swiper ('.swiper-container', {
+   direction : 'vertical',
+   pagination: '.swiper-pagination',
+   progress:true,
+   mousewheelControl : true,
+   watchSlidesProgress: true,
+   onInit: function(swiper){
+  
+   swiperAnimateCache(swiper);
+   swiperAnimate(swiper);
+    swiper.myactive = 0;
+	  },
+	 
+   onSlideChangeEnd: function(swiper){
+	swiperAnimate(swiper);
+    },
+
+ onProgress: function(swiper) {
+		for (var i = 0; i < swiper.slides.length; i++) {
+			var slide = swiper.slides[i];
+			var progress = slide.progress;
+			var translate, boxShadow;
+
+			translate = progress * swiper.height * 0.8;
+			scale = 1 - Math.min(Math.abs(progress * 0.2), 1);
+			boxShadowOpacity = 0;
+
+			slide.style.boxShadow = '0px 0px 10px rgba(0,0,0,' + boxShadowOpacity + ')';
+
+			if (i == swiper.myactive) {
+				es = slide.style;
+				es.webkitTransform = es.MsTransform = es.msTransform = es.MozTransform = es.OTransform = es.transform = 'translate3d(0,' + (translate) + 'px,0) scale(' + scale + ')';
+				es.zIndex=0;
+
+
+			}else{
+				es = slide.style;
+				es.webkitTransform = es.MsTransform = es.msTransform = es.MozTransform = es.OTransform = es.transform ='';
+				es.zIndex=1;
+				
+			}
+
+		}
+
+	},
+
+
+	onTransitionEnd: function(swiper, speed) {
+	swiperAnimate(swiper);
+		for (var i = 0; i < swiper.slides.length; i++) {
+		//	es = swiper.slides[i].style;
+		//	es.webkitTransform = es.MsTransform = es.msTransform = es.MozTransform = es.OTransform = es.transform = '';
+
+		//	swiper.slides[i].style.zIndex = Math.abs(swiper.slides[i].progress);
+
+			
+		}
+
+		swiper.myactive = swiper.activeIndex;
+
+	},
+	onSetTransition: function(swiper, speed) {
+
+		for (var i = 0; i < swiper.slides.length; i++) {
+			//if (i == swiper.myactive) {
+
+				es = swiper.slides[i].style;
+				es.webkitTransitionDuration = es.MsTransitionDuration = es.msTransitionDuration = es.MozTransitionDuration = es.OTransitionDuration = es.transitionDuration = speed + 'ms';
+			//}
+		}
+
+	},	
+	   })         
+ 
+  </script>
+  
+  
+  <script>
+
+//var time="";
+//var nor="";
+//var sign="";
+//$.ajax({ 
+//			type: "POST",
+//			async:false,
+//			url: "http://180.76.145.207/TJHKKefu/interfaces/test!getJsSdk.do",
+//		
+//			success: function(data){
+//				 var obj =eval("("+data+")");
+//				  time=obj["time"];  
+//				  nor=obj["nor"];
+//				  sign=obj["sign"];
+//			}
+//			});
+//
+//	wx.config({
+//    debug: true, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+//    appId: 'wxcdbc5a013e2a65c9', // 必填，公众号的唯一标识
+//    timestamp:time , // 必填，生成签名的时间戳
+//    nonceStr: nor, // 必填，生成签名的随机串
+//    signature: sign,// 必填，签名，见附录1
+//    jsApiList: [ 'checkJsApi',
+//        'onMenuShareTimeline',
+//        'onMenuShareAppMessage',
+//        'onMenuShareQQ',
+//        'onMenuShareWeibo',
+//        'hideMenuItems',
+//        'showMenuItems',
+//        'hideAllNonBaseMenuItem',
+//        'showAllNonBaseMenuItem',
+//        'translateVoice',
+//        'startRecord',
+//        'stopRecord',
+//        'onRecordEnd',
+//        'playVoice',
+//        'pauseVoice',
+//        'stopVoice',
+//        'uploadVoice',
+//        'downloadVoice',
+//        'chooseImage',
+//        'previewImage',
+//        'uploadImage',
+//        'downloadImage',
+//        'getNetworkType',
+//        'openLocation',
+//        'getLocation',
+//        'hideOptionMenu',
+//        'showOptionMenu',
+//        'closeWindow',
+//        'scanQRCode',
+//        'chooseWXPay',
+//        'openProductSpecificView',
+//        'addCard',
+//        'chooseCard',
+//        'openCard'] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+//});	
+//wx.ready(function () {
+//wx.checkJsApi({
+//    jsApiList: ['onMenuShareTimeline'], // 需要检测的JS接口列表，所有JS接口列表见附录2,
+//    success: function(res) {
+//	alert(res);
+//        // 以键值对的形式返回，可用的api值true，不可用为false
+//        // 如：{"checkResult":{"chooseImage":true},"errMsg":"checkJsApi:ok"}
+//    }
+//});
+//});
+//
+// document.querySelector('#music').onclick = function () {
+// alert("as");
+// setTimeout(function(){
+//   wx.onMenuShareTimeline({
+//      title: '互联网之子',
+//      
+//      link: 'http://movie.douban.com/subject/25785114/',
+//      imgUrl: 'http://img3.douban.com/view/movie_poster_cover/spst/public/p2166127561.jpg',
+// 
+//      success: function (res) {
+//        alert('已分享');
+//      },
+//      cancel: function (res) {
+//        alert('已取消');
+//      },
+//      fail: function (res) {
+//        alert(JSON.stringify(res));
+//      }
+//    });
+//	alert('已注册获取“发送给朋友”状态事件');
+//	
+//},20000);
+//	
+//	}
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,243 @@
+@height:946px;//window.innerHeight
+@width:300px;
+div{
+  display: block;
+}
+body,input,div,span,p,a,h1,h2,h3{
+  padding: 0;
+  margin: 0;
+  font-family: "微软雅黑","宋体", tahoma, Srial, helvetica, sans-serif;
+  position: relative;
+}
+
+#preloader{
+  width: 245px;
+  height: 300px;
+  text-align: center;
+  margin: 200px auto 0;
+  #loadingbar{
+    width: 245px;
+    height: 245px;
+    text-align: center;
+    color: #fff;
+    background: url('img/preload_bg.gif') no-repeat 0 245px;
+    img{
+      width: 245px;
+      height: 245px;
+    }
+  }
+  #loadingtext{
+    padding: 10px 0 0;
+    font-family: "DINProBold", Arial, sans-serif;
+    font-size: 13px;
+  }
+}
+
+#navbar-example{
+  opacity: 0.8;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 5000;
+  .container{
+    background-color: #ffffff;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 0;
+    .nav-pills{
+      li{
+        margin: 0 12px 0;
+      }
+    }
+  }
+}
+.sprite(){
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 200;
+  height: @height;
+}
+.screen(){
+  width: 100%;
+  position: absolute;
+  z-index: 202;
+  top: 0;
+  height: @height;
+
+}
+.homeDo(){
+  background-attachment: fixed;
+
+  background-repeat: no-repeat;
+  background-position: 50% 0px;
+}
+#home{
+  height: @height;
+  background-image:  url('img/496338.jpg');
+  .sprite{
+    .sprite;
+    background-image: url('img/maobi1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  };
+  .sprite-c{
+    .sprite;
+    z-index: 300;
+
+    background-image: url('img/guangpan2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 10px;
+  }
+  .homeDo;
+  .screen{
+    background-image: url('img/guangpan1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 0px;
+
+    .screen;
+    .content{
+      background-image: url('img/jiantou.png');
+      background-position: 0 0;
+      background-repeat: no-repeat;
+      padding-top: 15px;
+      float: right;
+      color: #ffffff;
+      margin-right: 15%;
+      margin-top: 100px;
+      width: @width;
+      height: @height/2;
+      p{
+
+      }
+
+    }
+  }
+}
+#home1{
+  height: @height;
+  background-image: url('img/1200379.jpg');
+  .sprite{
+    background-image: url('img/huojian.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    .sprite;
+  };
+  .homeDo;
+  .screen{
+    background-image: url('img/qiqiu.png');
+    background-repeat: no-repeat;
+
+    .screen;
+    .content{
+      background-image: url('img/jiantou.png');
+      background-position: 0 0;
+      background-repeat: no-repeat;
+      padding-top: 15px;
+      float: left;
+      color: #ffffff;
+      margin-left: 15%;
+      margin-top: 100px;
+      width: @width;
+      height: @height/2;
+      p{
+
+      }
+
+    }
+  }
+}
+#home2{
+  height: @height;
+  background-image: url('img/qiangbi.png');
+  .sprite{
+    background-image: url('img/shou.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    .sprite;
+    z-index: 15;
+  };
+  .homeDo;
+
+  .screen{
+    background-image: url('img/zhong.png');
+    background-repeat: no-repeat;
+
+    .screen;
+    .content{
+      background-image: url('img/jiantou.png');
+      background-position: 0 0;
+      background-repeat: no-repeat;
+      padding-top: 15px;
+      float: left;
+      color: #ffffff;
+      margin-left: 15%;
+      margin-top: 100px;
+      width: @width;
+      height: @height/2;
+      p{
+
+      }
+
+    }
+
+  }
+
+}
+
+#home3{
+  overflow: hidden;
+  background-attachment: fixed;
+  height: @height;
+  background-image: url('img/bg_home.gif');
+  width: 100%;
+  .bac{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: @height;
+    .rb-b{
+      background-image: url('img/rubbish1.png');
+      background-repeat: no-repeat;
+      background-position: 0 100%;
+      background-size: 100% auto;
+      width: 350px;
+      height: 425px;
+      margin-top: 500px;
+      margin-left: auto;
+      margin-right: auto;
+
+      .zhi{
+        background-repeat: no-repeat;
+        position: absolute;
+        width: 240px;
+        height: 305px;
+        top: -500px;
+        z-index: 50;
+        background-image: url('img/zhi.png');
+        background-position: 0 -300px;
+        left: 60px;
+        background-size: 100% auto;
+      }
+      .rb-f{
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 0;
+        background-image: url('img/rubbish1.png');
+        background-position: 0 0;
+        background-size: 100% auto;
+        width: 350px;
+        height: 425px;
+        z-index: 100;
+
+      }
+    }
+  }
+
+
+}

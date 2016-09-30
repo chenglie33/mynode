@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>简历设计</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
+    <link rel="stylesheet/less" href="resume.less">
+    <script src="bower_components/less/dist/less.js"></script>
+    <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+  <!--  http://ajax.googleapis.com/ajax/libs/jquery/1.3.1/jquery.min.js-->
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="js/jquery.inview.js"></script>
+    <script src="js/jquery.localScroll.js"></script>
+    <script src="js/jquery.scrollTo.js"></script>
+    <script src="preload.js"></script>
+
+</head>
+
+<body data-spy="scroll" data-target="#navbar-example" >
+
+<div id="preloader">
+    <div id="loadingbar"><img src="img/preload_logo.png" width="245" height="245" alt="Preload Logo" /></div>
+    <div id="loadingtext">
+        zhege1jiushi1de1a1
+    </div>
+</div>
+
+    <div id="navbar-example">
+        <div class="container">
+            <ul class="nav nav-pills " id="nav" role="tablist">
+                <li role="presentation" class="active"><a href="#home">home</a></li>
+                <li role="presentation" ><a href="#home1">home</a></li>
+                <li role="presentation" ><a href="#home2">home</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="home" class="" >
+        <div class="sprite"></div>
+
+        <div class="screen" >
+            <div class="content">
+                <h1>主题名称</h1><br><br>
+                <p>这个是啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊·</p>
+            </div>
+        </div>
+        <div class="sprite-c"></div>
+    </div>
+    <div id="home1">
+        <div class="sprite"></div>
+        <div class="screen">
+            <div class="content">
+                <h1>主题名称</h1><br><br>
+                <p>这个是啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊·</p>
+            </div>
+        </div>
+    </div>
+    <div id="home2">
+        <div class="sprite"></div>
+        <div class="screen" >
+            <div class="content">
+                <h1>主题名称</h1><br><br>
+                <p>这个是啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊asdasdasd·</p>
+            </div>
+        </div>
+    </div>
+    <div id="home3">
+        <div class="bac">
+            <div class="rb-b">
+                <div class="zhi"></div>
+                <div class="rb-f">
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script>
+    $(document).ready(function(){
+                $("#nav").localScroll();
+
+                var $window=$(window);
+                var $home=$("#home");
+                var homeSprite=$("#home  .sprite");
+                var homeSpritec=$("#home  .sprite-c");
+                var $home1=$("#home1");
+                var homeSprite1=$("#home1  .sprite");
+                var $home2=$("#home2");
+                var homeSprite2=$("#home2  .sprite");
+                var $home3=$("#home3");
+                var zhi=$(".zhi");
+                var windowHeight=$window.height();
+                windowHeight=946;
+                $("#home,#home1,#home2,#home3").bind('inview',function(event, visible){
+
+                    if(visible){
+                        $(this).addClass("inview");
+                    }else{
+                        $(this).removeClass("inview");
+                    }
+
+                });
+                //alert($("#home")[0].event.target())
+                function newPos(x, windowHeight, pos, adjuster, inertia){
+                    return x + "% " + (-((windowHeight + pos) - adjuster) * inertia)  + "px";
+                }
+                function posn(initp,pos,adjuster,n){
+//                    console.log(pos+"///////////")
+                    var t=(initp+((pos-(adjuster*n))*1))*1.2+720;
+                    if(t<121){
+                        return t;
+                    }else{
+                        return 121;
+                    }
+
+                }
+                function backp(initp,pos,adjuster,n){
+                    var p=(Math.ceil(-((pos-(adjuster*n))/100+9))*300);
+                    if(p>-2100){
+                     //   console.log(-((pos-(adjuster*n))/100+9))
+                        return "0 "+((Math.ceil(-((pos-(adjuster*n))/100+9))*300))+"px";
+                    }else if(p<-2100||p==-2100){
+
+                        return "0 "+"-2100"+"px";
+                    }
+
+                }
+                function Move() {
+
+                    var pos = $window.scrollTop(); //position of the scrollbar
+
+                    if($home.hasClass("inview")){
+                        $home.css({'backgroundPosition': newPos(50, windowHeight, pos, 946, 0.1)});
+                        homeSprite.css({'backgroundPosition': newPos(50, windowHeight, pos,946,- 0.9 )});
+                        homeSpritec.css({'backgroundPosition': newPos(50, windowHeight, pos,946, 0.5)});
+                    }
+                    if($home1.hasClass("inview")){
+                        $home1.css({'backgroundPosition': newPos(50, windowHeight, pos, 946*2, 0.1)});
+                        homeSprite1.css({'backgroundPosition': newPos(50, windowHeight, pos, 946*2, 0.5)})
+                    }
+                    if($home2.hasClass("inview")){
+                        $home2.css({'backgroundPosition': newPos(50, windowHeight, pos, 946*3, 0.1)});
+                        homeSprite2.css({'backgroundPosition': newPos(50, windowHeight, pos, 946*3, -1.1)})
+                    }
+                    if($home3.hasClass("inview")){
+                      //  console.log(backp(-500,pos,946,3));
+                        zhi.css({'top':posn(-500,pos,946,3),'backgroundPosition':backp(-500,pos,946,3)});
+                    }
+                }
+                $window.resize(function(){ //if the user resizes the window...
+                    Move(); //move the background images in relation to the movement of the scrollbar
+                    //RepositionNav(); //reposition the navigation list so it remains vertically central
+                });
+
+                $window.bind('scroll', function(){ //when the user is scrolling...
+                    Move(); //move the background images in relation to the movement of the scrollbar
+                });
+    }
+    )
+
+</script>
+
+</html>

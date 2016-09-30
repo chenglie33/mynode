@@ -1,0 +1,17 @@
+<% if(ListItems.sNames.length==0){
+
+%>
+<li class=""><a href="<%=ListItems.fhref%>" ><%=ListItems.fname%></a></li>
+<%}else{ %>
+<li class="dropdown">
+    <a href="#" class="dropdown-toggle"  id="dropdown1" data-hover="dropdown" data-toggle="dropdown">
+        <%=ListItems.fname%>
+        <span class="glyphicon glyphicon-menu-down"></span>
+    </a>
+    <ul class="dropdown-menu" >
+        <%for(var i=0;i<ListItems.sNames.length;i++){%>
+        <li><a target="_blank" href="<%=ListItems.sNames[i].shref%>"><%=ListItems.sNames[i].sname%></a></li>
+        <%}%>
+    </ul>
+</li>
+<%}%>
