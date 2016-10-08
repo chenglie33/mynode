@@ -9,6 +9,7 @@ Colorpicker
 	if ( $.isFunction($.fn[ 'colorpicker' ]) ) {
 
 		$(function() {
+
 			$('[data-plugin-colorpicker]').each(function() {
 				var $this = $( this ),
 					opts = {};
@@ -18,6 +19,7 @@ Colorpicker
 					opts = pluginOptions;
 
 				$this.themePluginColorPicker(opts);
+
 			});
 		});
 
@@ -80,6 +82,7 @@ Colorpicker
 
 	// jquery plugin
 	$.fn.themePluginColorPicker = function(opts) {
+
 		return this.each(function() {
 			var $this = $(this);
 

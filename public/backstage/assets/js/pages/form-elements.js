@@ -2,28 +2,7 @@
 /* 
 Colorpicker
 */
-(function( $ ) {
 
-
-
-	if ( $.isFunction($.fn[ 'colorpicker' ]) ) {
-
-		$(function() {
-			$('[data-plugin-colorpicker]').each(function() {
-				var $this = $( this ),
-					opts = {};
-
-				var pluginOptions = $this.data('plugin-options');
-				if (pluginOptions)
-					opts = pluginOptions;
-
-				$this.themePluginColorPicker(opts);
-			});
-		});
-
-	}
-
-}).apply(this, [ jQuery ]);
 
 (function(theme, $) {
 
@@ -93,33 +72,33 @@ Colorpicker
 	}
 
 }).apply(this, [ window.theme, jQuery ]);
-
-	
-/* 
-Datepicker
-*/
 (function( $ ) {
 
-	'use strict';
 
-	if ( $.isFunction($.fn[ 'datepicker' ]) ) {
 
-		$(function() {
-			$('[data-plugin-datepicker]').each(function() {
-				var $this = $( this ),
-					opts = {};
+	if ( $.isFunction($.fn[ 'colorpicker' ]) ) {
 
-				var pluginOptions = $this.data('plugin-options');
-				if (pluginOptions)
-					opts = pluginOptions;
 
-				$this.themePluginDatePicker(opts);
-			});
+		$('[data-plugin-colorpicker]').each(function() {
+			var $this = $( this ),
+				opts = {};
+
+			var pluginOptions = $this.data('plugin-options');
+			if (pluginOptions)
+				opts = pluginOptions;
+
+			$this.themePluginColorPicker(opts);
 		});
+
 
 	}
 
 }).apply(this, [ jQuery ]);
+	
+/* 
+Datepicker
+*/
+
 
 (function(theme, $) {
 
@@ -200,33 +179,31 @@ Datepicker
 	}
 
 }).apply(this, [ window.theme, jQuery ]);
-
-
-/* 
-TimePicker
-*/
 (function( $ ) {
 
 	'use strict';
 
-	if ( $.isFunction($.fn[ 'timepicker' ]) ) {
+	if ( $.isFunction($.fn[ 'datepicker' ]) ) {
 
-		$(function() {
-			$('[data-plugin-timepicker]').each(function() {
-				var $this = $( this ),
-					opts = {};
+		$('[data-plugin-datepicker]').each(function() {
+			var $this = $( this ),
+				opts = {};
 
-				var pluginOptions = $this.data('plugin-options');
-				if (pluginOptions)
-					opts = pluginOptions;
+			var pluginOptions = $this.data('plugin-options');
+			if (pluginOptions)
+				opts = pluginOptions;
 
-				$this.themePluginTimePicker(opts);
-			});
+			$this.themePluginDatePicker(opts);
 		});
 
 	}
 
 }).apply(this, [ jQuery ]);
+
+/* 
+TimePicker
+*/
+
 
 (function(theme, $) {
 
@@ -297,32 +274,32 @@ TimePicker
 	}
 
 }).apply(this, [ window.theme, jQuery ]);
-
-/* 
-Masked Input
-*/
 (function( $ ) {
 
 	'use strict';
 
-	if ( $.isFunction($.fn[ 'mask' ]) ) {
+	if ( $.isFunction($.fn[ 'timepicker' ]) ) {
 
-		$(function() {
-			$('[data-plugin-masked-input]').each(function() {
-				var $this = $( this ),
-					opts = {};
 
-				var pluginOptions = $this.data('plugin-options');
-				if (pluginOptions)
-					opts = pluginOptions;
+		$('[data-plugin-timepicker]').each(function() {
+			var $this = $( this ),
+				opts = {};
 
-				$this.themePluginMaskedInput(opts);
-			});
+			var pluginOptions = $this.data('plugin-options');
+			if (pluginOptions)
+				opts = pluginOptions;
+
+			$this.themePluginTimePicker(opts);
 		});
+
 
 	}
 
 }).apply(this, [ jQuery ]);
+/* 
+Masked Input
+*/
+
 
 (function(theme, $) {
 
@@ -392,4 +369,25 @@ Masked Input
 	}
 
 }).apply(this, [ window.theme, jQuery ]);
+(function( $ ) {
 
+	'use strict';
+
+	if ( $.isFunction($.fn[ 'mask' ]) ) {
+
+
+		$('[data-plugin-masked-input]').each(function() {
+			var $this = $( this ),
+				opts = {};
+
+			var pluginOptions = $this.data('plugin-options');
+			if (pluginOptions)
+				opts = pluginOptions;
+
+			$this.themePluginMaskedInput(opts);
+		});
+
+
+	}
+
+}).apply(this, [ jQuery ]);
