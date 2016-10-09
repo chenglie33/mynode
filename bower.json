@@ -15,7 +15,8 @@
     "less": "^2.6.0",
     "unslider": "^2.0.3",
     "angular-ui-router": "^0.3.1",
-    "oclazyload": "^1.0.9"
+    "oclazyload": "^1.0.9",
+    "ueditor": "^1.4.3"
   },
   "resolutions": {
     "webcomponentsjs": "~0.5.4"
