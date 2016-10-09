@@ -1,28 +1,7 @@
 /* 
 SummerNote
 */
-(function( $ ) {
 
-	'use strict';
-
-	if ( $.isFunction($.fn[ 'summernote' ]) ) {
-
-		$(function() {
-			$('[data-plugin-summernote]').each(function() {
-				var $this = $( this ),
-					opts = {};
-
-				var pluginOptions = $this.data('plugin-options');
-				if (pluginOptions)
-					opts = pluginOptions;
-
-				$this.themePluginSummerNote(opts);
-			});
-		});
-
-	}
-
-}).apply(this, [ jQuery ]);
 
 (function(theme, $) {
 
@@ -98,32 +77,32 @@ SummerNote
 	}
 
 }).apply(this, [ window.theme, jQuery ]);
-
-/* 
-Markdown
-*/
 (function( $ ) {
 
 	'use strict';
 
-	if ( $.isFunction($.fn[ 'markdown' ]) ) {
+	if ( $.isFunction($.fn[ 'summernote' ]) ) {
 
-		$(function() {
-			$('[data-plugin-markdown-editor]').each(function() {
-				var $this = $( this ),
-					opts = {};
 
-				var pluginOptions = $this.data('plugin-options');
-				if (pluginOptions)
-					opts = pluginOptions;
+		$('[data-plugin-summernote]').each(function() {
+			var $this = $( this ),
+				opts = {};
 
-				$this.themePluginMarkdownEditor(opts);
-			});
+			var pluginOptions = $this.data('plugin-options');
+			if (pluginOptions)
+				opts = pluginOptions;
+
+			$this.themePluginSummerNote(opts);
 		});
+
 
 	}
 
 }).apply(this, [ jQuery ]);
+/* 
+Markdown
+*/
+
 
 (function(theme, $) {
 
@@ -194,3 +173,25 @@ Markdown
 	}
 
 }).apply(this, [ window.theme, jQuery ]);
+(function( $ ) {
+
+	'use strict';
+
+	if ( $.isFunction($.fn[ 'markdown' ]) ) {
+
+
+		$('[data-plugin-markdown-editor]').each(function() {
+			var $this = $( this ),
+				opts = {};
+
+			var pluginOptions = $this.data('plugin-options');
+			if (pluginOptions)
+				opts = pluginOptions;
+
+			$this.themePluginMarkdownEditor(opts);
+		});
+
+
+	}
+
+}).apply(this, [ jQuery ]);
