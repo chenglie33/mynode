@@ -3,8 +3,8 @@
  */
 angular.module('myApp').controller('editorCtrl',["$ocLazyLoad",function($ocLazyLoad){
     $ocLazyLoad.load([
-        "/backstage/assets/js/pages/form-elements.js",
-        "/backstage/assets/js/pages/form-editors.js"]
+        "/backstage/assets/js/pages/form-elements.js"]
     );
-
+console.log(11)
+    var ue = UE.getEditor('editor');
 }])

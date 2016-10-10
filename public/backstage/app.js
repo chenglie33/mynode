@@ -34,7 +34,7 @@ app .config(["$stateProvider","$urlRouterProvider","$locationProvider","$ocLazyL
                 resolve:{
                     deps:["$ocLazyLoad",function($ocLazyLoad){
                         return $ocLazyLoad.load(["timeplug",
-                            "x_editor",
+                           // "Ueditor",
                             "/backstage/controller/editorCtrl.js",
 
                         ]);
@@ -65,16 +65,12 @@ app.constant("Modules_Config",[{
     ]
 },
     {
-        name:"x_editor",
+        name:"Ueditor",
         module:true,
         files:[
-            "/backstage/assets/plugins/summernote/css/summernote.css",
-            "/backstage/assets/plugins/summernote/css/summernote-bs3.css",
-            "/backstage/assets/plugins/bootstrap-markdown/css/bootstrap-markdown.min.css",
-            "/backstage/assets/plugins/summernote/js/summernote.js",
-            "/backstage/assets/plugins/bootstrap-markdown/js/bootstrap-markdown.js",
-            "/backstage/assets/plugins/bootstrap-markdown/js/markdown.js",
-            "/backstage/assets/plugins/bootstrap-markdown/js/to-markdown.js"
+            "/backstage/ueditor/ueditor.config.js",
+            "/backstage/ueditor/ueditor.all.js",
+            "/backstage/ueditor/lang/zh-cn/zh-cn.js",
         ]
     }
 
