@@ -5,6 +5,7 @@ angular.module('myApp').controller('editorCtrl',["$ocLazyLoad",function($ocLazyL
     $ocLazyLoad.load([
         "/backstage/assets/js/pages/form-elements.js"]
     );
-console.log(11)
-    var ue = UE.getEditor('editor');
+
+    var ue =  UE.getEditor('editor');
+
 }])

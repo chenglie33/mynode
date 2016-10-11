@@ -21,13 +21,14 @@ app .config(["$stateProvider","$urlRouterProvider","$locationProvider","$ocLazyL
                     deps:["$ocLazyLoad",function($ocLazyLoad){
                         return $ocLazyLoad.load("/backstage/controller/test.js");
                     }]
-            }
+            },
+            cache: false
         })
             .state("editor",{
                 url:"/editor",
                 views:{
                     "":{
-                        templateUrl:"/backstage/template/editor.html",
+                        templateUrl:"/backstage/template/editor.html"+'?datestamp=' + (new Date()).getTime(),
                         controller:"editorCtrl"
                     }
                 },
@@ -39,7 +40,8 @@ app .config(["$stateProvider","$urlRouterProvider","$locationProvider","$ocLazyL
 
                         ]);
                     }]
-                }
+                },
+                cache: false
 
             })
 
@@ -74,5 +76,5 @@ app.constant("Modules_Config",[{
         ]
     }
 
-])
+]);
 

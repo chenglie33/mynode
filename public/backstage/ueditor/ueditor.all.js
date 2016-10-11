@@ -6862,6 +6862,7 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
          * @warning 必须且只能调用一次
          */
         render: function (container) {
+
             var me = this,
                 options = me.options,
                 getStyleValue=function(attr){
@@ -6905,6 +6906,7 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
                     '<script type=\'text/javascript\' ' + (ie ? 'defer=\'defer\'' : '' ) +' id=\'_initialScript\'>' +
                     'setTimeout(function(){editor = window.parent.UE.instants[\'ueditorInstant' + me.uid + '\'];editor._setup(document);},0);' +
                     'var _tmpScript = document.getElementById(\'_initialScript\');_tmpScript.parentNode.removeChild(_tmpScript);</script></html>';
+
                 container.appendChild(domUtils.createElement(document, 'iframe', {
                     id: 'ueditor_' + me.uid,
                     width: "100%",
@@ -20008,11 +20010,11 @@ UE.ui = baidu.editor.ui = {};
      */
     UE.getEditor = function (id, opt) {
         var editor = instances[id];
-        if (!editor) {
+       // if (!editor) {
             editor = instances[id] = new UE.ui.Editor(opt);
             editor.render(id);
-        }
-        return editor;
+    //    }
+      //  return editor;
     };
 
 
