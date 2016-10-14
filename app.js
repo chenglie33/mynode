@@ -2,6 +2,7 @@
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
+var session = require('express-session');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
@@ -67,7 +68,7 @@ app.use(function(req, res, next) {
 if (app.get('env') === 'development') {
   app.use(function(err, req, res, next) {
     res.status(err.status || 500);
-    res.render('error', {
+    res.render('page-500', {
       message: err.message,
       error: err
     });
@@ -78,7 +79,7 @@ if (app.get('env') === 'development') {
 // no stacktraces leaked to user
 app.use(function(err, req, res, next) {
   res.status(err.status || 500);
-  res.render('error', {
+  res.render('page-500', {
     message: err.message,
     error: {}
   });

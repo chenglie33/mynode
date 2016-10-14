@@ -24,3 +24,19 @@ exports.addUser=function(req, res,next){
         res.send(err);
     });
 };
+exports.login=function(req,res,next){
+   // console.log(req.body)
+    var callback=function(err,model){
+        if(err){
+            res.send(err);
+        }else{
+            if(model.length>0){
+                req.se
+                res.redirect("/backstage");
+            }else{
+                res.send({status:1,info:"用户账号密码错误"});
+            }
+        }
+    }
+    userDao.getByQuery(req.body,callback)
+}
