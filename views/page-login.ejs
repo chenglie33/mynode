@@ -71,11 +71,11 @@
 								<h2 class="title"><i class="fa fa-user"></i> Login</h2>
 							</div>
 							<div class="panel-body">
-								<form action="/users/login" method="post">
+								<form action="/users/login" method="post" name="userForm">
 									<div class="form-group">
 										<label>Username</label>
 										<div class="input-group input-group-icon">
-											<input name="name" type="text" class="form-control bk-noradius" />
+											<input name="name" type="text" class="form-control bk-noradius" required/>
 											<span class="input-group-addon">
 												<span class="icon">
 													<i class="fa fa-user"></i>
@@ -87,7 +87,7 @@
 									<div class="form-group">
 										<label>Password</label>									
 										<div class="input-group input-group-icon">
-											<input name="pw" type="password" class="form-control bk-noradius" />
+											<input name="pw" type="password" class="form-control bk-noradius" required/>
 											<span class="input-group-addon">
 												<span class="icon">
 													<i class="fa fa-lock"></i>
@@ -99,7 +99,7 @@
 									<div class="row">
 										<div class="col-sm-8">
 											<div class="checkbox-custom checkbox-default bk-margin-bottom-10">
-												<input id="RememberMe" name="rememberme" type="checkbox"/>
+												<input id="RememberMe"  type="checkbox"/>
 												<label for="RememberMe">Remember Me</label>
 											</div>
 										</div>

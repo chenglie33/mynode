@@ -25,13 +25,17 @@ exports.addUser=function(req, res,next){
     });
 };
 exports.login=function(req,res,next){
-   // console.log(req.body)
+    if( req.session.name!=undefined){
+        req.body.name= req.session.name;
+        req.body.pw=req.session.pw;
+    }
     var callback=function(err,model){
         if(err){
             res.send(err);
         }else{
             if(model.length>0){
-                req.se
+                req.session.name=req.body.name;
+                req.session.pw=req.body.pw;
                 res.redirect("/backstage");
             }else{
                 res.send({status:1,info:"用户账号密码错误"});
@@ -39,4 +43,9 @@ exports.login=function(req,res,next){
         }
     }
     userDao.getByQuery(req.body,callback)
+}
+exports.loginOut=function(req,res,next){
+    req.session.name=undefined;
+    req.session.pw=undefined;
+    res.redirect("/");
 }

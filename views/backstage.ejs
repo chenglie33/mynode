@@ -70,7 +70,7 @@
             <div class="userbox">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                     <div class="profile-info">
-                        <span class="name">John Smith Doe</span>
+                        <span class="name"><%=name %></span>
                         <span class="role">Developer</span>
                     </div>
                     <i class="fa custom-caret"></i>
@@ -80,20 +80,12 @@
                         <li class="dropdown-menu-header bk-bg-white bk-margin-top-15">
 
                         </li>
-                        <li>
-                            <a href="page-profile.html"><i class="fa fa-user"></i> Profile</a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-wrench"></i> Settings</a>
-                        </li>
-                        <li>
-                            <a href="page-invoice"><i class="fa fa-usd"></i> Payments</a>
-                        </li>
+
                         <li>
                             <a href="#/editor"><i class="fa fa-file"></i>添加笔记</a>
                         </li>
                         <li>
-                            <a href="page-login.html"><i class="fa fa-power-off"></i> 退出</a>
+                            <a href="/users/loginOut"><i class="fa fa-power-off"></i> 退出</a>
                         </li>
                     </ul>
                 </div>
@@ -103,8 +95,7 @@
         <!-- End Navbar Right -->
     </div>
 </div>
-<!-- End: Header -->
-<div class="copyrights">Collect from <a href="http://bootstrap.cn/" >企业网站模板</a></div>
+
 <!-- Start: Content -->
 <div class="container-fluid content">
     <div class="row">
@@ -125,7 +116,7 @@
                                     <img src="assets/img/avatar.jpg" class="img-circle bk-img-60" alt="" />
                                 </div>
                                 <div class="bk-padding-top-10">
-                                    <i class="fa fa-circle text-success"></i> <small>Administrator</small>
+                                    <i class="fa fa-circle text-success"></i> <small><%=name%></small>
                                 </div>
                             </div>
                             <div class="divider2"></div>
@@ -140,10 +131,10 @@
                                     <i class="fa fa-copy" aria-hidden="true"></i><span>笔记</span>
                                 </a>
                                 <ul class="nav nav-children">
-                                    <li><a href="page-activity.html"><span class="text"> Java</span></a></li>
-                                    <li><a href="page-invoice.html"><span class="text"> NodeJS</span></a></li>
-                                    <li><a href="page-profile.html"><span class="text"> JavaScript</span></a></li>
-                                    <li><a href="page-pricing-tables.html"><span class="text"> Other </span></a></li>
+                                    <li><a href="#"><span class="text"> Java</span></a></li>
+                                    <li><a href="#"><span class="text"> NodeJS</span></a></li>
+                                    <li><a href="#"><span class="text"> JavaScript</span></a></li>
+                                    <li><a href="#"><span class="text"> Other </span></a></li>
                                 </ul>
                             </li>
 

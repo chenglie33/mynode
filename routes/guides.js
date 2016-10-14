@@ -17,7 +17,7 @@ router.post('/getAll',function(req, res, next){
 
 });
 router.post('/addGuide',function(req, res, next){
-    GuideDao.addGuide(req, res, next,function(msg){
+    GuideDao.addGuide(req, res, next,function(err){
             res.send(msg);
     });
 });

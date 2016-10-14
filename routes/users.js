@@ -4,15 +4,23 @@ var userDao=require("./../dao/UserDao");
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-  res.render("page-login",{});
+  if( req.session.name!=undefined){
+    userDao.login(req,res,next);
+  }else{
+    res.render("page-login",{});
+  }
+
 });
 router.post('/getAll',function(req, res, next){
   userDao.getAll(req, res, next);
 });
 router.post('/addUser',function(req, res, next){
-  userDao.addUser(req, res, next)
+  userDao.addUser(req, res, next);
 });
 router.post('/login',function(req,res,next){
   userDao.login(req,res,next);
+})
+router.get("/loginOut",function(req,res,next){
+  userDao.loginOut(req,res,next);
 })
 module.exports = router;

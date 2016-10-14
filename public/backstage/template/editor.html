@@ -23,7 +23,7 @@
                     <form action="" method="post">
                         <div class="form-group">
                             <label for="nf-email">主题名称</label>
-                            <input type="email" id="nf-email" name="nf-email" class="form-control" placeholder="Theme Name">
+                            <input type="text" id="nf-email" ng-model="title" class="form-control" placeholder="Theme Name">
                             <span class="help-block">输入你的主题名称</span>
                         </div>
 
@@ -36,26 +36,24 @@
                         <div class="form-group">
                             <label >类别</label><br>
                             <div class="radio-custom radio-inline">
-                                <input type="radio" id="inline-radio1" name="inline-radios" value="option1">
+                                <input type="radio" id="inline-radio1" name="inline-radios" value="Java" ng-model="type" ng-checked="true">
                                 <label for="inline-radio1"> Java</label>
                             </div>
                             <div class="radio-custom radio-inline">
-                                <input type="radio" id="inline-radio2" name="inline-radios" value="option2">
+                                <input type="radio" id="inline-radio2" name="inline-radios" value="NodeJS" ng-model="type">
                                 <label for="inline-radio2"> NodeJS</label>
                             </div>
                             <div class="radio-custom radio-inline">
-                                <input type="radio" id="inline-radio3" name="inline-radios" value="option3">
+                                <input type="radio" id="inline-radio3" name="inline-radios" value="JavaScript" ng-model="type">
                                 <label for="inline-radio3"> JavaScript</label>
                             </div>
                             <div class="radio-custom radio-inline">
-                                <input type="radio" id="inline-radio4" name="inline-radios" value="option4">
+                                <input type="radio" id="inline-radio4" name="inline-radios" value="Other" ng-model="type">
                                 <label for="inline-radio4"> Other</label>
                             </div>
-
-
                             <span class="help-block">选择文章的类别</span>
                         </div>
-                        <button type="button" class="bk-margin-5 btn btn-primary btn-sm">提交</button>
+                        <button type="button" class="bk-margin-5 btn btn-primary btn-sm" ng-click="submit()">提交</button>
                     </form>
                 </div>
             </div>

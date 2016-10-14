@@ -20014,7 +20014,7 @@ UE.ui = baidu.editor.ui = {};
             editor = instances[id] = new UE.ui.Editor(opt);
             editor.render(id);
     //    }
-      //  return editor;
+        return editor;
     };
 
 

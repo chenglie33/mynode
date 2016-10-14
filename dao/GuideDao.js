@@ -14,11 +14,11 @@ exports.getAllGuide=function(req, res,next,callback){
 };
 exports.addGuide=function(req, res,next,callback){
     console.error(req.body)
-    guideDao.create(req.body,function(err){
-        if(typeof callback=='function'){
+    guideDao.create(req.body,function(err,model){
+        if(err){
                 callback(err);
         }else{
-            console.log("this is err")
+                callback(model);
         }
     });
 };
