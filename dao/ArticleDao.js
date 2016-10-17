@@ -6,6 +6,9 @@ var DaoBase = require('./BaseDao'),
     Article = models.Articles;
 var articleDao = new DaoBase(Article);
 exports.saveArticle=function(req,res,next){
+    if(req.session.name!="tests"){
+        res.send({error:"暂无权限"});
+    }
     var callback=function(err,doc){
         if(err){
             res.send(err);

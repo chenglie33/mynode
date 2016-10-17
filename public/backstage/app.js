@@ -44,6 +44,25 @@ app .config(["$stateProvider","$urlRouterProvider","$locationProvider","$ocLazyL
                 cache: false
 
             })
+            .state('articless',{
+                url:"/articless",
+                views:{
+                    "":{
+                        templateUrl:"/backstage/template/article.html",
+                        controller:"articleCtrl"
+                    }
+                },
+                resolve:{
+                    deps:["$ocLazyLoad",function($ocLazyLoad){
+                        return $ocLazyLoad.load([
+                            // "Ueditor",
+                            "/backstage/controller/articleCtrl.js",
+
+                        ]);
+                    }]
+                },
+                cache: false
+            })
 
 
 

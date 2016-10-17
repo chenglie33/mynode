@@ -6,5 +6,8 @@ var articleDao=require('./../dao/ArticleDao');
 var router = express.Router();
 router.post("/addArticle",function(req,res,next){
     articleDao.saveArticle(req,res,next);
+});
+router.post("/",function(req,res,next){
+    articleDao.getAllArticle(req,res,next);
 })
 module.exports=router;
