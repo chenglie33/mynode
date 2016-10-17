@@ -6,6 +6,10 @@ angular.module("myApp").controller("articleCtrl",["$ocLazyLoad",'$scope','$http'
             "/backstage/assets/js/pages/table.js"]
     );
     $http.post('/article',{}).success(function(data){
+
+        for(i in data){
+            data[i].contents=$sce.trustAsHtml( data[i].contents);
+        }
         $scope.lists=data;
     });
 
