@@ -45,7 +45,7 @@ app .config(["$stateProvider","$urlRouterProvider","$locationProvider","$ocLazyL
 
             })
             .state('articless',{
-                url:"/articless",
+                url:"/articless/:type",
                 views:{
                     "":{
                         templateUrl:"/backstage/template/article.html",

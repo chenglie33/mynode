@@ -51,6 +51,9 @@
     .ng-cloak{
        display: none;
     }
+    .panel-body img{
+        width: 100%;
+    }
 </style>
 <body>
 <div class="navbar" role="navigation" >
@@ -131,10 +134,10 @@
                                     <i class="fa fa-copy" aria-hidden="true"></i><span>笔记</span>
                                 </a>
                                 <ul class="nav nav-children">
-                                    <li><a href="#/articless"><span class="text"> Java</span></a></li>
-                                    <li><a href="#/articless"><span class="text"> NodeJS</span></a></li>
-                                    <li><a href="#/articless"><span class="text"> JavaScript</span></a></li>
-                                    <li><a href="#/articless"><span class="text"> Other </span></a></li>
+                                    <li><a href="#/articless/Java"><span class="text"> Java</span></a></li>
+                                    <li><a href="#/articless/NodeJS"><span class="text"> NodeJS</span></a></li>
+                                    <li><a href="#/articless/JavaScript"><span class="text"> JavaScript</span></a></li>
+                                    <li><a href="#/articless/Other"><span class="text"> Other </span></a></li>
                                 </ul>
                             </li>
 
@@ -219,18 +222,34 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title bk-fg-primary">Modal title</h4>
+                <h4 class="modal-title bk-fg-primary" id="modal-title">Modal title</h4>
             </div>
             <div class="modal-body">
-                <p class="bk-fg-danger">Here settings can be configured...</p>
+                <p class="bk-fg-danger" id="modal-content">Here settings can be configured...</p>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+                <button type="button" class="btn btn-primary" id="btn-auto">Save changes</button>
             </div>
         </div>
     </div>
 </div><!-- End Modal Dialog -->
+
+<!-- alert Dialog -->
+<div class="modal fade bs-example-modal-sm" id="alert" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="false">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content" >
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+            </div>
+            <div class="modal-body" id="alert_content">
+                ...
+            </div>
+
+        </div>
+    </div>
+</div><!-- alert Dialog -->
 
 <div class="clearfix"></div>
 

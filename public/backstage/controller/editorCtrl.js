@@ -28,7 +28,15 @@ angular.module('myApp').controller('editorCtrl',["$ocLazyLoad","$http","$scope",
         reqArr.contents=$scope.content;
         reqArr.type=$scope.type;
         $http.post('/article/addArticle',reqArr).success(function(data){
-           alert("添加成功")
+
+            if(data.error==null||undefined){
+                $("#alert_content").html("添加成功");
+                $("#alert").modal("show")
+            }else{
+                $("#alert_content").html(data.error);
+                $("#alert").modal("show")
+            }
+
         }).error(function(err){
             console.log(err)
         })
