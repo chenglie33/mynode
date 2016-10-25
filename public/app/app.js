@@ -5,9 +5,9 @@ angular.module('myApp', [
   'ngRoute'
 ]).controller('banner',[function(){
   $('.banner').unslider({
-    autoplay: true,
+    autoplay: false,
     fluid: true,
-    arrows: false,
+    arrows: true,
     dots: true,               //  Display dot navigation
 
   });
