@@ -7,7 +7,7 @@ angular.module('myApp', [
   $('.banner').unslider({
     autoplay: false,
     fluid: true,
-    arrows: true,
+    arrows: false,
     dots: true,               //  Display dot navigation
 
   });
