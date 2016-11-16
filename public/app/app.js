@@ -6,9 +6,9 @@ angular.module('myApp', [
 ]).controller('banner',[function(){
   $('.banner').unslider({
     autoplay: false,
-    fluid: true,
+    fluid: false,
     arrows: false,
-    dots: true,               //  Display dot navigation
+    dots: false,               //  Display dot navigation
 
   });
 }]).controller("nav",['$scope',function($scope){

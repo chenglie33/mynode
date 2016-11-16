@@ -80,16 +80,16 @@ div,html,body,input{margin: 0;padding: 0; font-family: "微软雅黑","宋体", 
 
 .banner { position: relative; overflow: auto;margin-top: 81px}
 .banner li { list-style: none; }
-.banner ul li { float: left; display: block;min-height: 300px;
+.banner ul li { float: left; display: block;min-height: 400px;
 text-align: center;
   color: #ffffff;
   background-repeat: no-repeat  ;
   background-position: center;
-  background-size: 100% 100%;
-  -o-background-size: 100% 100%;
-  -ms-background-size: 100% 100%;
-  -moz-background-size: 100% 100%;
-  -webkit-background-size: 100% 100%;
+  background-size: 100% auto;
+  -o-background-size: 100% auto;
+  -ms-background-size: 100% auto;
+  -moz-background-size: 100% auto;
+  -webkit-background-size: 100% auto;
 
   p{
     max-width: 527px;
@@ -162,7 +162,11 @@ text-align: center;
     .container{
       padding-top: 100px;
       padding-bottom: 50px;
+
     }
 
+  }
+  .banner ul li{
+   min-height: 224px;
   }
 }
