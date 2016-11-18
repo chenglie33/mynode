@@ -5,16 +5,28 @@
             <ol class="breadcrumb visible-sm visible-md visible-lg">
                 <li><a href="index.html"><i class="icon fa fa-home"></i>Home</a></li>
                 <li class="active"><i class="fa fa-table"></i>Article</li>
+                <li class="active">
+
+
+                </li>
             </ol>
+
         </div>
+
         <div class="pull-right">
             <h2>Article</h2>
         </div>
+
     </div>
     <!-- End Page Header -->
     <div class="row" >
-
-        <div class="col-lg-6" ng-repeat="list in lists" ng-clock>
+        <div class="input-group input-search" style="table-layout: auto;width: 300px;margin-left:15px;margin-top: -10px;margin-bottom: 15px">
+            <input type="text" class="form-control" ng-init="qus=''" ng-model="qus" placeholder="Search...">
+							<span class="input-group-btn">
+								<button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
+							</span>
+        </div>
+        <div class="col-lg-6" ng-repeat="list in lists | Qus:qus track by $index" ng-clock>
             <div class="panel">
                 <div class="panel-heading bk-bg-primary">
                     <h6><i class="fa fa-table red"></i><span class="break"></span>{{list.title}}</h6>

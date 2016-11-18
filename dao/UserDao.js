@@ -38,7 +38,8 @@ exports.login=function(req,res,next){
                 req.session.pw=req.body.pw;
                 res.redirect("/backstage");
             }else{
-                res.send({status:1,info:"用户账号密码错误"});
+                res.render('page-500',{message:"登录失败",error:{stack:"用户账号密码错误"}})
+               // res.send({status:1,info:"用户账号密码错误"});
             }
         }
     }
