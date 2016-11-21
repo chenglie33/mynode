@@ -11,6 +11,12 @@ router.get('/', function(req, res, next) {
   }
 
 });
+router.get('/guest', function(req, res, next) {
+    req.session.name="guest";
+    res.render('backstage',{name:req.session.name});
+
+
+});
 router.post('/getAll',function(req, res, next){
   userDao.getAll(req, res, next);
 });
