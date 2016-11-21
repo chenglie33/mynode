@@ -25,13 +25,15 @@ exports.addUser=function(req, res,next){
     });
 };
 exports.login=function(req,res,next){
-    if( req.session.name!=undefined||req.session.name!="guest"){
+
+    if( req.session.name!=undefined&&req.session.name!="guest"){
         req.body.name= req.session.name;
         req.body.pw=req.session.pw;
     }
+
     var callback=function(err,model){
         if(err){
-            res.render('page-500',{message:"登录失败",error:{stack:"用户账号密码错误"}})
+            res.render('page-500',{message:"登录失败",error:{stack:err}})
         }else{
             if(model.length>0){
                 req.session.name=req.body.name;
