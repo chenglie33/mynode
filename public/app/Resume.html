@@ -5,6 +5,7 @@
     <title>简历设计</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
@@ -20,7 +21,12 @@
     <script src="preload.js"></script>
 
 </head>
+<script type="text/javascript">
 
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+
+window.location.href = 'mobile/index.html'; //可以换成http地址
+}</script>
 <body data-spy="scroll" data-target="#navbar-example" >
 
 <div id="preloader">
