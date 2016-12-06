@@ -54,7 +54,7 @@ app.use("/backstage/ueditor/ue", ueditor(path.join(__dirname, 'public'), functio
   else {
 
     res.setHeader('Content-Type', 'application/json');
-    res.redirect('../../app/bower_components/ueditor/nodejs/config.json');
+    res.redirect('../../backstage/ueditor/nodejs/config.json');
   }
 }));
 
