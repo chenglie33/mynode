@@ -30,6 +30,10 @@ exports.login=function(req,res,next){
         req.body.name= req.session.name;
         req.body.pw=req.session.pw;
     }
+    if(req.session.name=="guest"){
+        res.render('backstage',{name:req.session.name});
+        return;
+    }
 
     var callback=function(err,model){
         if(err){
