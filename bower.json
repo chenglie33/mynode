@@ -17,7 +17,8 @@
     "angular-ui-router": "^0.3.1",
     "oclazyload": "^1.0.9",
     "ueditor": "^1.4.3",
-    "jquery": "^2.2.1"
+    "jquery": "^2.2.1",
+    "chart.js": "^2.4.0"
   },
   "resolutions": {
     "webcomponentsjs": "~0.5.4"

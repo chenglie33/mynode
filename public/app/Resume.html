@@ -15,6 +15,7 @@
     <script src="bower_components/jquery/dist/jquery.js"></script>
   <!--  http://ajax.googleapis.com/ajax/libs/jquery/1.3.1/jquery.min.js-->
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/chart.js/dist/Chart.bundle.js"></script>
     <script src="js/jquery.inview.js"></script>
     <script src="js/jquery.localScroll.js"></script>
     <script src="js/jquery.scrollTo.js"></script>
@@ -27,6 +28,7 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 
 window.location.href = 'mobile/index.html'; //可以换成http地址
 }</script>
+
 <body data-spy="scroll" data-target="#navbar-example" >
 
 <div id="preloader">
@@ -40,7 +42,7 @@ window.location.href = 'mobile/index.html'; //可以换成http地址
         <div class="container">
             <ul class="nav nav-pills " id="nav" role="tablist">
                 <li role="presentation" class="active"><a href="#home">关于</a></li>
-                <li role="presentation" ><a href="#home1">工作经验</a></li>
+                <li role="presentation" ><a href="#home1">职业技能</a></li>
                 <li role="presentation" ><a href="#home2">项目实践</a></li>
             </ul>
         </div>
@@ -49,13 +51,16 @@ window.location.href = 'mobile/index.html'; //可以换成http地址
         <div class="sprite"></div>
 
         <div class="screen" >
+            <div class="head-p"><img src="../backstage/assets/img/tt.jpg"></div>
             <div class="content">
-                <h1>关于</h1><br><br>
-                <p><span class="glyphicon glyphicon-user"></span> 陈磊</p>
-                <p><span class="glyphicon glyphicon-home"> </span>江苏南通</p>
-                <p><span class="glyphicon glyphicon-time"></span>年龄 23</p>
-                <p><span class="glyphicon glyphicon-folder-close"></span> 工作经验 两年</p>
-                <p><span class="glyphicon glyphicon-book"></span> 学历 大专</p>
+                <div><span class="glyphicon glyphicon-user" style="margin: 0 auto"></span><br> 陈磊</div>
+                <div><span class="glyphicon glyphicon-home"> </span><br>江苏南通</div>
+                <div><span class="glyphicon glyphicon-time"></span><br>年龄 23</div>
+                <div><span class="glyphicon glyphicon-folder-close"></span> <br>工作经验 两年</div>
+                <div><span class="glyphicon glyphicon-book"></span><br> 学历 大专</div>
+                <div style="clear: both;width: 100%;text-align: justify;color: #ffffff;margin-top: 40px;font-size: 20px">简述：陈磊 男 24岁 毕业于连云港职业技术学院 在校期间担任团支书以及乒乓球社副社长 多次组织参加各类活动 毕业后参与历时3个月的NIIT的培训班
+                    培训结束后与无锡柏禧科技有限公司工作  在公司主要负责的项目包括前端页面以及后台的开发(包括官网 一元夺宝 商城 微信等项目)
+                </div>
             </div>
         </div>
         <div class="sprite-c"></div>
@@ -64,8 +69,14 @@ window.location.href = 'mobile/index.html'; //可以换成http地址
         <div class="sprite"></div>
         <div class="screen">
             <div class="content">
-                <h1>主题名称</h1><br><br>
-                <p>这个是啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊·</p>
+                <h1>职业技能</h1><br><br>
+                <div class="row" style="margin-top: 100px">
+                    <div class="col-sm-3">JAVA<canvas id="JAVA" width="400" height="400"></canvas></div>
+                    <div class="col-sm-3">AngularJs<canvas id="AngularJs" width="400" height="400"></canvas></div>
+                    <div class="col-sm-3">Jquery<canvas id="Jquery" width="400" height="400"></canvas></div>
+                    <div class="col-sm-3">Node<canvas id="Node" width="400" height="400"></canvas></div>
+                </div>
+                <div style="margin-top: 100px;text-align: justify;font-size: 20px">熟悉ionic phonegap 等WebApp开发；熟悉cxf Spring Hibernate等后台框架；熟悉Mysql mongodb等数据库；熟悉微信公众号的二次开发</div>
             </div>
         </div>
     </div>
@@ -73,8 +84,12 @@ window.location.href = 'mobile/index.html'; //可以换成http地址
         <div class="sprite"></div>
         <div class="screen" >
             <div class="content">
-                <h1>主题名称</h1><br><br>
-                <p>这个是啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊asdasdasd·</p>
+                <h1>项目实战</h1><br><br>
+                <p>无锡柏禧科技有限公司官网</p>
+                <p>一元夺宝完整项目后台开发</p>
+                <p>智能插座众筹项目前后端开发</p>
+                <p>蜘蛛之家（商城开发）</p>
+                <p>蜘蛛之家（微信公众号开发以及微商城）</p>
             </div>
         </div>
     </div>
@@ -87,7 +102,183 @@ window.location.href = 'mobile/index.html'; //可以换成http地址
             </div>
         </div>
     </div>
+<script>
+    window.chartColors = {
+        red: 'rgb(255, 99, 132)',
+        orange: 'rgb(255, 159, 64)',
+        yellow: 'rgb(255, 205, 86)',
+        green: 'rgb(75, 192, 192)',
+        blue: 'rgb(54, 162, 235)',
+        purple: 'rgb(153, 102, 255)',
+        grey: 'rgb(231,233,237)',
+        white:'rgb(255,255,255)'
+    };
 
+    window.randomScalingFactor = function() {
+        return (Math.random() > 0.5 ? 1.0 : -1.0) * Math.round(Math.random() * 100);
+    }
+    var randomScalingFactor = function() {
+        return Math.round(Math.random() * 100);
+    };
+
+    var config2 = {
+        type: 'doughnut',
+        data: {
+            datasets: [{
+                data: [
+                    0.8,
+                   0.2,
+
+                ],
+                backgroundColor: [
+                    window.chartColors.blue,
+                    window.chartColors.white,
+
+                ],
+                label: 'Dataset 1'
+            }], labels: [
+                "熟练度",
+                "空白",
+
+            ]
+        },
+        options: {
+            responsive: true,
+            legend: {
+                position: 'top',
+            },
+            title: {
+                display: false,
+                text: 'java'
+            },
+            animation: {
+                animateScale: true,
+                animateRotate: true
+            }
+        }
+    };
+    var config1 = {
+        type: 'doughnut',
+        data: {
+            datasets: [{
+                data: [
+                    0.7,
+                    0.3,
+
+                ],
+                backgroundColor: [
+                    window.chartColors.orange,
+                    window.chartColors.white,
+
+                ],
+                label: 'Dataset 1'
+            }], labels: [
+                "熟练度",
+                "空白",
+
+            ]
+        },
+        options: {
+            responsive: true,
+            legend: {
+                position: 'top',
+            },
+            title: {
+                display: false,
+                text: 'java'
+            },
+            animation: {
+                animateScale: true,
+                animateRotate: true
+            }
+        }
+    };
+    var config = {
+        type: 'doughnut',
+        data: {
+            datasets: [{
+                data: [
+                    0.7,
+                    0.3,
+
+                ],
+                backgroundColor: [
+                    window.chartColors.red,
+                    window.chartColors.white,
+
+                ],
+                label: 'Dataset 1'
+            }], labels: [
+                "熟练度",
+                "空白",
+
+            ]
+        },
+        options: {
+            responsive: true,
+            legend: {
+                position: 'top',
+            },
+            title: {
+                display: false,
+                text: 'java'
+            },
+            animation: {
+                animateScale: true,
+                animateRotate: true
+            }
+        }
+    };
+    var config3 = {
+        type: 'doughnut',
+        data: {
+            datasets: [{
+                data: [
+                    0.5,
+                    0.5,
+
+                ],
+                backgroundColor: [
+                    window.chartColors.green,
+                    window.chartColors.white,
+
+                ],
+                label: 'Dataset 1'
+            }], labels: [
+                "熟练度",
+                "空白",
+
+            ]
+        },
+        options: {
+            responsive: true,
+            legend: {
+                position: 'top',
+            },
+            title: {
+                display: false,
+                text: 'java'
+            },
+            animation: {
+                animateScale: true,
+                animateRotate: true
+            }
+        }
+    };
+
+    window.onload=function(){
+        var ctx = document.getElementById("JAVA").getContext("2d");
+        var ctx1 = document.getElementById("AngularJs").getContext("2d");
+        var ctx2 = document.getElementById("Jquery").getContext("2d");
+        var ctx3 = document.getElementById("Node").getContext("2d");
+        window.myDoughnut = new Chart(ctx, config);
+        window.myDoughnut = new Chart(ctx1, config1);
+        window.myDoughnut = new Chart(ctx2, config2);
+        window.myDoughnut = new Chart(ctx3, config3);
+
+    }
+
+</script>
 </body>
 <script>
     $(document).ready(function(){
