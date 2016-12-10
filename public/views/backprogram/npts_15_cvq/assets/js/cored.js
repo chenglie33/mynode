@@ -2,6 +2,7 @@
 
 (function( $ ) {
 
+
 	'use strict';
 
 	var $items = $( '.nav-sidebar > li.nav-parent' );
@@ -288,9 +289,7 @@ if ($.ajaxLoad) {
     }
   })
 }
-
 $(document) .ready(function (e) {
-
   e('ul.nav-sidebar') .find('a') .each(function () {
     if (e(e(this)) [0].href == String(window.location)) {
       e(this) .parent() .addClass('active');
