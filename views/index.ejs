@@ -3,6 +3,7 @@
 <!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,7 +18,7 @@
   <link rel="stylesheet" href="/app/app.css">
   <link rel="stylesheet/less" href="/app/index.less">
   <script src="/app/bower_components/less/dist/less.js"></script>
-  <script src="/app/bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+
 </head>
 <body>
   <script src="/app/bower_components/jquery/dist/jquery.js"></script>
@@ -33,8 +34,8 @@
   <script src="/app/app.js"></script>
 <div class="fixed" >
   <div class="f-mBar">
-      <div class="weather"><iframe width="240" scrolling="no" height="18" frameborder="0" allowtransparency="true" src="http://i.tianqi.com/index.php?c=code&id=1&color=%23FFFFFF&icon=1&wind=1&num=2"></iframe></div>
-     <div class="loginB"></div>
+    <!--  <div class="weather"><iframe width="240" scrolling="no" height="18" frameborder="0" allowtransparency="true" src="http://i.tianqi.com/index.php?c=code&id=1&color=%23FFFFFF&icon=1&wind=1&num=2"></iframe></div>
+     <div class="loginB"></div>-->
   </div>
   <nav class="navbar navbar-default s-mBar my-navbar" ng-controller="nav">
     <div class="navbar-header">
@@ -145,7 +146,7 @@
   </div>
   <div class="content-project">
     <h1>Project</h1><br>
-    <div class="container">
+    <div class="container" style="padding: 0">
       <div class="contents-wrap">
         <div class="p">
           <div class="p1" style="background: #d2322d"></div>
@@ -162,9 +163,13 @@
           <div class="line10"></div>
           <div class="line11"></div>
           <div class="line12"></div>
+          <div class="l-box1"></div>
         </div>
       </div>
     </div>
+  </div>
+  <div style="width: 100px;height: 100px;background-color: #0000cc;display: flex;align-items: center">
+    <div style="width: 40px;height: 40px;background-color: #000011;position: absolute"></div>
   </div>
 <div class="footer">
   <div class="row">
