@@ -12,10 +12,26 @@ angular.module('myApp', [
 
   });
 }]).controller("nav",['$scope',function($scope){
-
-
-
    // $('#dropdown1').dropdown('toggle');
+}]).controller("project",["$interval",function($interval){
+  function timeshow(){
+    var date=new Date();
+    var hour,min,sec,hours,mins,secs;
+    hour=date.getHours();
+    if(hour>12){
+      hour=hour-12;
+    }
+    min=date.getMinutes();
+    sec=date.getSeconds();
+    hours=hour*30+270;
+    mins=min*6+270;
+    secs=sec*6+270;
+    $(".sec").css({'transform':'rotate('+secs+'deg)'});
+    $(".hour").css({'transform':'rotate('+hours+'deg)'});
+    $(".min").css({'transform':'rotate('+mins+'deg)'});
+  }
+  $interval(timeshow,1000);
+
 }]).
 config(['$routeProvider', function($routeProvider) {
   $routeProvider.otherwise({redirectTo: '/view1'});
