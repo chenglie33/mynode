@@ -31,7 +31,88 @@ angular.module('myApp', [
     $(".min").css({'transform':'rotate('+mins+'deg)'});
   }
   $interval(timeshow,1000);
+$(".box-x").click(function(){
+  var num=$(this).attr("data-index");
+  switch (num){
+    case "1":
+          $("#myt").html("柏禧官网")
+          $("#myb").html("柏禧网络科技有限公司官网<br>传送门:<a href='http://www.byheetech.com/'>click here</a>");
+          $('#myModal').modal('show')
+          break;
+    case "2":
+      $("#myt").html("柏禧智能插座众筹")
+      $("#myb").html("柏禧智能插座众筹项目，从前台到后台的所有开发<br>传送门:<span href=''>传送门损坏 后台项目或项目已经下架</span>");
+      $('#myModal').modal('show')
+      break;
+    case "3":
+      $("#myt").html("一元夺宝项目")
+      $("#myb").html("蜘蛛网络科技有限公司的一元夺宝项目，环境为大屏广告机以及安卓盒子，主要负责后台系统的开发以及后台页面<br>传送门:<span href=''>传送门损坏 后台项目或项目已经下架</span>");
+      $('#myModal').modal('show')
+      break;
+    case "4":
+      $("#myt").html("爱炫购")
+      $("#myb").html("爱炫购商城的后台开发，项目由于资金问题被终止<br>传送门:<span href=''>传送门损坏 后台项目或项目已经下架</span>");
+      $('#myModal').modal('show')
+      break;
+    case "5":
+      $("#myt").html("微信开发")
+      $("#myb").html("参与微信的二次开发，包括微商城以及耳机分销，（微信号：蜘蛛实体店）<br>传送门:<span href=''>无</span>");
+      $('#myModal').modal('show')
+      break;
+    case "6":
+      $("#myt").html("剑侠奇缘答题器")
+      $("#myb").html("外接项目剑侠奇缘答题器，使用框架AngularJs，将在后续放入传送门<br>传送门:<span href=''>无</span>");
+      $('#myModal').modal('show')
+      break;
+    case "7":
+      $("#myt").html("div画图")
+      $("#myb").html("使用div，利用css3特性画图<br>传送门:<a href='/app/draw/cat.html'>click here</a>");
+      $('#myModal').modal('show')
+      break;
+  }
 
+});
+
+  $(".box-x").mouseover(function(){
+    var num=$(this).attr("data-index");
+    switch (num) {
+      case "1":
+        $("#titlem").html("柏禧官网")
+        $("#titlec").html("柏禧网络科技有限公司官网<br>传送门:<a href='http://www.byheetech.com/'>click here</a>");
+
+        break;
+      case "2":
+        $("#titlem").html("柏禧智能插座众筹")
+        $("#titlec").html("柏禧智能插座众筹项目，从前台到后台的所有开发<br>传送门:<span href=''>传送门损坏 后台项目或项目已经下架</span>");
+
+        break;
+      case "3":
+        $("#titlem").html("一元夺宝项目")
+        $("#titlec").html("蜘蛛网络科技有限公司的一元夺宝项目，环境为大屏广告机以及安卓盒子，主要负责后台系统的开发以及后台页面<br>传送门:<span href=''>传送门损坏 后台项目或项目已经下架</span>");
+
+        break;
+      case "4":
+        $("#titlem").html("爱炫购")
+        $("#titlec").html("爱炫购商城的后台开发，项目由于资金问题被终止<br>传送门:<span href=''>传送门损坏 后台项目或项目已经下架</span>");
+
+        break;
+      case "5":
+        $("#titlem").html("微信开发")
+        $("#titlec").html("参与微信的二次开发，包括微商城以及耳机分销，（微信号：蜘蛛实体店）<br>传送门:<span href=''>无</span>");
+
+        break;
+      case "6":
+        $("#titlem").html("剑侠奇缘答题器")
+        $("#titlec").html("外接项目剑侠奇缘答题器，使用框架AngularJs，将在后续放入传送门<br>传送门:<span href=''>无</span>");
+
+        break;
+      case "7":
+        $("#titlem").html("div画图")
+        $("#titlec").html("使用div，利用css3特性画图<br>传送门:<a href='/app/draw/cat.html'>click here</a>");
+
+        break;
+    }
+  })
 }]).
 config(['$routeProvider', function($routeProvider) {
   $routeProvider.otherwise({redirectTo: '/view1'});

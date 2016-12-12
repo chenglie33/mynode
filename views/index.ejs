@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="/app/bower_components/bootstrap/dist/css/bootstrap.css">
   <link rel="stylesheet" href="/app/bower_components/html5-boilerplate/dist/css/main.css">
   <link rel="stylesheet" href="/font/font_awo4ui8k0wndbo6r/iconfont.css">
+  <link rel="stylesheet" href="/font/lmx/iconfont.css">
   <link rel="stylesheet" href="/app/app.css">
   <link rel="stylesheet/less" href="/app/index.less">
   <script src="/app/bower_components/less/dist/less.js"></script>
@@ -33,6 +34,19 @@
   <script src="/app/bower_components/chart.js/dist/Chart.min.js"></script>
 
   <script src="/app/app.js"></script>
+  <div class="modal fade bs-example-modal-sm" id="myModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+          <h4 class="modal-title" id="myt">Modal title</h4>
+        </div>
+        <div class="modal-body" id="myb">
+          <p>One fine body&hellip;</p>
+        </div>
+      </div>
+    </div>
+  </div>
 <div class="fixed" >
   <!--<div class="f-mBar">
     &lt;!&ndash;  <div class="weather"><iframe width="240" scrolling="no" height="18" frameborder="0" allowtransparency="true" src="http://i.tianqi.com/index.php?c=code&id=1&color=%23FFFFFF&icon=1&wind=1&num=2"></iframe></div>
@@ -145,12 +159,12 @@
       </div>
     </div>
   </div>
-  <div class="content-project" ng-controller="project" style="background-color: rgb(24,24,45)">
+  <div class="content-project" ng-controller="project" style="background-color: rgb(24,24,45);background: url(app/img/bgp.png)">
     <h1 style="color: #ffffff">Project</h1><br>
     <div class="container" style="padding: 0">
       <div class="contents-wrap">
         <div class="p">
-          <div class="p1" style="background: #d2322d"></div>
+          <div class="p1"> <div><i class="icon iconfont icon-taluoliumangxing" style=""></i></div></div>
           <div class="p2"></div>
           <div class="line1"></div>
           <div class="line2"></div>
@@ -164,34 +178,55 @@
           <div class="line10"></div>
           <div class="line11"></div>
           <div class="line12"></div>
-          <a class="l-box1 box-x"></a>
-          <a class="l-box2 box-x"></a>
-          <a class="l-box3 box-x"></a>
-          <a class="l-box4 box-x"></a>
-          <a class="l-box5 box-x"></a>
-          <a class="l-box6 box-x"></a>
-          <a class="l-box7 box-x"></a>
-          <a class="l-box8 box-x"></a>
-          <a class="l-box9 box-x"></a>
-          <a class="l-box10 box-x"></a>
-          <a class="l-box11 box-x"></a>
-          <a class="l-box12 box-x"></a>
-          <a class="boxf boxf-1"><i class="icon iconfont icon-xingzuosheshouzuo"></i></a>
-          <a class="boxf boxf-2"><i class="icon iconfont icon-xingzuotianhezuo"></i></a>
-          <a class="boxf boxf-3"><i class="icon iconfont icon-xingzuotianchengzuo"></i></a>
-          <a class="boxf boxf-4"><i class="icon iconfont icon-xingzuochunvzuo"></i></a>
-          <a class="boxf boxf-5"><i class="icon iconfont icon-xingzuoshizizuo"></i></a>
-          <a class="boxf boxf-6"><i class="icon iconfont icon-xingzuojuxiezuo"></i></a>
-          <a class="boxf boxf-7"><i class="icon iconfont icon-xingzuoshuangzizuo"></i></a>
-          <a class="boxf boxf-8"><i class="icon iconfont icon-xingzuojinniuzuo"></i></a>
-          <a class="boxf boxf-9"><i class="icon iconfont icon-xingzuomuyangzuo"></i></a>
-          <a class="boxf boxf-10"><i class="icon iconfont icon-xingzuoshuangyuzuo"></i></a>
-          <a class="boxf boxf-11"><i class="icon iconfont icon-xingzuoshuipingzuo"></i></a>
-          <a class="boxf boxf-12"><i class="icon iconfont icon-xingzuomojiezuo"></i></a>
+          <a class="l-box1 box-x" data-index="1">12</a>
+          <a class="l-box2 box-x" data-index="2">1</a>
+          <a class="l-box3 box-x" data-index="3">2</a>
+          <a class="l-box4 box-x" data-index="4">3</a>
+          <a class="l-box5 box-x" data-index="5">4</a>
+          <a class="l-box6 box-x" data-index="6">5</a>
+          <a class="l-box7 box-x" data-index="7">6</a>
+          <a class="l-box8 box-x" data-index="8"></a>
+          <a class="l-box9 box-x" data-index="9"></a>
+          <a class="l-box10 box-x" data-index="10"></a>
+          <a class="l-box11 box-x" data-index="11"></a>
+          <a class="l-box12 box-x" data-index="12"></a>
           <div class="hour clock"></div>
           <div class="min clock"></div>
           <div class="sec clock"></div>
+          <div class="boxf-w">
+
+            <a class="boxf boxf-1"><i class="icon iconfont icon-xingzuosheshouzuo"></i></a>
+            <a class="boxf boxf-2"><i class="icon iconfont icon-xingzuotianhezuo"></i></a>
+            <a class="boxf boxf-3"><i class="icon iconfont icon-xingzuotianchengzuo"></i></a>
+            <a class="boxf boxf-4"><i class="icon iconfont icon-xingzuochunvzuo"></i></a>
+            <a class="boxf boxf-5"><i class="icon iconfont icon-xingzuoshizizuo"></i></a>
+            <a class="boxf boxf-6"><i class="icon iconfont icon-xingzuojuxiezuo"></i></a>
+            <a class="boxf boxf-7"><i class="icon iconfont icon-xingzuoshuangzizuo"></i></a>
+            <a class="boxf boxf-8"><i class="icon iconfont icon-xingzuojinniuzuo"></i></a>
+            <a class="boxf boxf-9"><i class="icon iconfont icon-xingzuomuyangzuo"></i></a>
+            <a class="boxf boxf-10"><i class="icon iconfont icon-xingzuoshuangyuzuo"></i></a>
+            <a class="boxf boxf-11"><i class="icon iconfont icon-xingzuoshuipingzuo"></i></a>
+            <a class="boxf boxf-12"><i class="icon iconfont icon-xingzuomojiezuo"></i></a>
+
+          </div>
+
         </div>
+      </div>
+      <div class="ringtc" style="">
+        <h3 id="titlem">柏禧智能插座众筹</h3>
+        <P id="titlec">柏禧智能插座众筹项目，从前台到后台的所有开发
+          传送门:传送门损坏 后台项目或项目已经下架</P>
+
+      </div>
+      <div class="ringtl" style="">
+        <h3>目录</h3>
+        <P>1：柏禧智能插座众筹</P>
+        <P>2：一元夺宝项目</P>
+        <P>3：爱炫购</P>
+        <P>4：微信开发</P>
+        <P>5：剑侠奇缘答题器</P>
+        <P>6：div绘画</P>
+        <P>12：柏禧官网</P>
       </div>
     </div>
   </div>
