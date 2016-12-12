@@ -51,7 +51,7 @@ $(".box-x").click(function(){
       break;
     case "4":
       $("#myt").html("爱炫购")
-      $("#myb").html("爱炫购商城的后台开发，项目由于资金问题被终止<br>传送门:<span href=''>传送门损坏 后台项目或项目已经下架</span>");
+      $("#myb").html("爱炫购商城的后台开发，项目被终止<br>传送门:<span href=''>传送门损坏 后台项目或项目已经下架</span>");
       $('#myModal').modal('show')
       break;
     case "5":
@@ -93,7 +93,7 @@ $(".box-x").click(function(){
         break;
       case "4":
         $("#titlem").html("爱炫购")
-        $("#titlec").html("爱炫购商城的后台开发，项目由于资金问题被终止<br>传送门:<span href=''>传送门损坏 后台项目或项目已经下架</span>");
+        $("#titlec").html("爱炫购商城的后台开发，项目被终止<br>传送门:<span href=''>传送门损坏 后台项目或项目已经下架</span>");
 
         break;
       case "5":
